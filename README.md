@@ -13,3 +13,5 @@ Healthcheck interations are suppose to verify system usage, e.g. for Java these 
 > For now the Agents can only be run on Unix-like boxes, supporting bash version 3.0+, e.g. Linux. Run `verify_system` to check if the current agent supports your platform or not.
 
 On each Agent interaction, the system may be extended by implementating custom _Agent Actions (aka Actlets)_, where any custom verifications can be applied. The _Actlets_ can also be configured in a chain, where each step will contribute to the final check verification of the corresponding node health being monitored.
+
+> The Agent uses REST/JSON pings to communicate healthckecs with OOILD.

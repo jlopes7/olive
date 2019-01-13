@@ -5,6 +5,7 @@ Olive is a modern open source Load Balancer written in Java to solve key HA patt
 
 ## Basic Architecture
 Besides supporting common LD algorithms including _hashing_, _round-robin_, OOILD goes further and implements the concept of "inteligent loading" by resolving the health of one's particular system during any given time. It implements that by using the idea of  "_Running Agents_". The Agent's core responsibility is to continously instrospect the system's internal health and safely send healthchecks to the Olive Server.
+
 ![Context Architecture](docs/images/arch-001.png)
 
 Healthcheck interations are suppose to verify system usage, e.g. for Java these steps includes active JVM memory organization, GC cycle activities, number of active threads, and system statistics (_swap usage, system memory, storage and more_).
